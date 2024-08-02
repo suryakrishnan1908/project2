@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.shadow-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    text-align: center;
+}
+
+form label, form input {
+    margin: 5px;
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(7, 169, 234);
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(8, 102, 191);
+}
+
+.table {
+    margin-top: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.drop {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.drop:hover {
+    background-color: #ff8f8f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .drop {
+    background-color: #ffa9a9;
+}
+
+.alert-message {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+

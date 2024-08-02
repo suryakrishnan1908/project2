@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DYNAMIC TABLE</title>
+        <link rel="stylesheet" type="text/css" href="tablestyle.css">
+    </head>
+    <body>
+        <h1>DYNAMIC TABLE</h1>
+        <form method="post" name="sample">
+            <div class="shadow-box">
+                <div class="form-group">
+                    <label>EMPLOYEE ID: </label>
+                    <input type="number" name="empid">
+                </div>
+                <div class="form-group">
+                    <label>EMPLOYEE NAME: </label>
+                    <input type="text" name="empname">
+                </div>
+                <div class="form-group">
+                    <label>AGE: </label>
+                    <input type="text" name="empage">
+                </div>
+                <div class="form-group">
+                    <label>DATE JOINED: </label>
+                    <input type="date" name="joda">
+                </div>
+                <div class="but">
+                    <button type="button" onclick="adddata();">ADD DATA</button>
+                </div>
+                <div id="alert-message" class="alert-message"></div>
+            </div>
+            <table id="tb" class="table" border="1">
+                <tr>
+                    <th>EMPLOYEE ID</th>
+                    <th>EMPLOYEE NAME</th>
+                    <th>AGE</th>
+                    <th>DATE JOINED</th>
+                    <th>ACTION</th>
+                </tr>
+            </table>
+        </form>
+
+        <script type="text/javascript">
+            function adddata() {
+                var empid = document.sample.empid.value;
+                var empname = document.sample.empname.value;
+                var empage = document.sample.empage.value;
+                var datejoined = document.sample.joda.value;
+
+                var alertMessage = document.getElementById('alert-message');
+
+                if (empid && empname && empage && datejoined) {
+                    var tr = document.createElement('tr');
+
+                    var td1 = tr.appendChild(document.createElement('td'));
+                    var td2 = tr.appendChild(document.createElement('td'));
+                    var td3 = tr.appendChild(document.createElement('td'));
+                    var td4 = tr.appendChild(document.createElement('td'));
+                    var td5 = tr.appendChild(document.createElement('td'));
+
+                    td1.innerHTML = empid;
+                    td2.innerHTML = empname;
+                    td3.innerHTML = empage;
+                    td4.innerHTML = datejoined;
+
+                    var dropdown = document.createElement('div');
+                    dropdown.className = 'dropdown';
+
+                    var drop = document.createElement('button');
+                    drop.className = 'drop';
+                    drop.innerHTML = 'Actions';
+                    dropdown.appendChild(drop);
+
+                    var dropdownContent = document.createElement('div');
+                    dropdownContent.className = 'dropdown-content';
+
+                    var dismiss = document.createElement('a');
+                    dismiss.href = '#';
+                    dismiss.innerHTML = 'Dismiss';
+                    dropdownContent.appendChild(dismiss);
+
+                    var suspend = document.createElement('a');
+                    suspend.href = '#';
+                    suspend.innerHTML = 'Suspend';
+                    dropdownContent.appendChild(suspend);
+
+                    var decrement = document.createElement('a');
+                    decrement.href = '#';
+                    decrement.innerHTML = 'Decrement';
+                    dropdownContent.appendChild(decrement);
+
+                    var increment = document.createElement('a');
+                    increment.href = '#';
+                    increment.innerHTML = 'Increment';
+                    dropdownContent.appendChild(increment);
+
+                    var deleteOption = document.createElement('a');
+                    deleteOption.href = '#';
+                    deleteOption.innerHTML = 'Delete';
+                    deleteOption.onclick = function() {
+                        tr.remove();
+                    };
+                    dropdownContent.appendChild(deleteOption);
+
+                    dropdown.appendChild(dropdownContent);
+                    td5.appendChild(dropdown);
+
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    tr.appendChild(td5);
+
+                    document.getElementById("tb").appendChild(tr); 
+
+                    // Clear the alert message
+                    alertMessage.innerHTML = '';
+                } else {
+                    // Display the alert message
+                    alertMessage.innerHTML = '<span class="alert-text">Please fill all fields</span>';
+                }
+            }
+        </script>
+    </body>
+</html>
