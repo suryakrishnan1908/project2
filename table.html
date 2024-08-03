@@ -63,14 +63,14 @@
                     td3.innerHTML = empage;
                     td4.innerHTML = datejoined;
 
-                    var deleteButton = document.createElement('button');
-                    deleteButton.innerHTML = 'Delete';
-                    deleteButton.className = 'delete-button';
-                    deleteButton.onclick = function() {
+                    var deleteB = document.createElement('button');
+                    deleteB.innerHTML = 'Delete';
+                    deleteB.className = 'delete-button';
+                    deleteB.onclick = function() {
                         tr.remove();
                     };
 
-                    td5.appendChild(deleteButton);
+                    td5.appendChild(deleteB);
 
                     tr.appendChild(td1);
                     tr.appendChild(td2);
