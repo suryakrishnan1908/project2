@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(8, 102, 191);
+    background-color: rgb(189, 223, 255);
 }
 
 .table {
@@ -74,7 +74,7 @@ button:hover {
     background-color: #f2f2f2;
 }
 
-.drop {
+.delete-button {
     background-color: #ff0000;
     color: white;
     padding: 10px 20px;
@@ -85,44 +85,8 @@ button:hover {
     transition: background-color 0.3s;
 }
 
-.drop:hover {
+.delete-button:hover {
     background-color: #ff8f8f;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .drop {
-    background-color: #ffa9a9;
 }
 
 .alert-message {
@@ -130,4 +94,3 @@ button:hover {
     margin-top: 10px;
     text-align: center;
 }
-
